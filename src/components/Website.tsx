@@ -1,0 +1,83 @@
+"use client";
+import Link from "next/link";
+import styles from "../app/page.module.css";
+import {
+  Title,
+  Text,
+  Button,
+  Container,
+  Grid,
+  Image,
+  Box,
+} from "@mantine/core";
+export default function Website() {
+  return (
+    <div>
+      <div className={styles.main}>
+        <Container className={styles.wrapper}>
+          <Grid>
+            <Grid.Col visibleFrom="md" span={{ lg: 4, md: 3 }}>
+              <Box style={{ display: "flex", justifyContent: "end" }}>
+                <Image maw="310" h="auto" src={"./images/doctor1.png"} alt="" />
+              </Box>
+            </Grid.Col>
+            <Grid.Col span={{ lg: 8, md: 9 }}>
+              <div style={{ justifyContent: "start" }} className={styles.inner}>
+                <Title className={styles.smart}>Welcome to</Title>
+                <Title className={styles.healthcare}>
+                  an{" "}
+                  <Text
+                    c="#ff4912"
+                    component="span"
+                    fs="italic"
+                    className={styles.system}
+                    inherit
+                  >
+                    expert system
+                  </Text>{" "}
+                  for Pregnancy test{" "}
+                </Title>
+
+                <Box
+                  hiddenFrom="md"
+                  style={{ display: "flex", justifyContent: "end" }}
+                >
+                  <Image
+                    maw="310"
+                    h="auto"
+                    src={"./images/doctor1.png"}
+                    alt=""
+                  />
+                </Box>
+                <Text
+                  mt="xl"
+                  pt="lg"
+                  fs="italic"
+                  size="xl"
+                  c="var(--mantine-color-pink-6)"
+                  className={styles.description}
+                >
+                  Please click the button below to get started.
+                </Text>
+                <div className={styles.controls}>
+                  <Link href={"/diagnose"} passHref>
+                    <Button
+                      mr={"lg"}
+                      radius="xl"
+                      c="#fa1b35"
+                      bg="var(--mantine-color-white)"
+                      className={styles.control}
+                      size="lg"
+                    >
+                      Take The Test
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </Grid.Col>
+          </Grid>
+        </Container>
+      </div>
+    </div>
+  );
+}
