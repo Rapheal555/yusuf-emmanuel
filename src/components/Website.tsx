@@ -35,7 +35,7 @@ export default function Website() {
                   >
                     expert system
                   </Text>{" "}
-                  for Pregnancy test{" "}
+                  for Pregnancy diagnosis{" "}
                 </Title>
 
                 <Box
